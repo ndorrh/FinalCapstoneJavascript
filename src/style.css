@@ -14,10 +14,17 @@ a {
   text-decoration: none;
 }
 
-header,
-footer {
+header {
   width: 80%;
   margin: 0 auto;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  border-top: 2px solid black;
 }
 
 .navbar,
