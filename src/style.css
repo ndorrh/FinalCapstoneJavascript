@@ -5,6 +5,10 @@
   font-size: 16px;
 }
 
+.hiden {
+  display: none;
+}
+
 ul {
   list-style: none;
 }
@@ -29,7 +33,6 @@ footer {
 
 .navbar,
 .nav-list,
-#comment-popup,
 #meal-details,
 .category-ingredients-wrapper,
 #links,
@@ -69,7 +72,6 @@ footer {
 
 #meal-details {
   width: 60%;
-  border: solid red;
 }
 
 #comment-popup {
@@ -94,13 +96,11 @@ footer {
   background-size: 100% 100%;
   width: 100%;
   background-repeat: no-repeat;
-  border: green solid;
 }
 
 .form-comment {
   width: 60%;
   flex-direction: column;
-  border: solid yellow;
   gap: 40px;
   margin-bottom: 3%;
 }
@@ -152,6 +152,7 @@ textarea {
   width: 60%;
   text-align: right;
   margin-top: 2%;
+}
 
 #maincontainer {
   display: flex;
