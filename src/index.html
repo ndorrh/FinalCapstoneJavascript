@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food store</title>
   </head>
-  <body>
+  <body id="body">
     <header>
       <nav class="navbar">
         <a href="#" class="logo"><img src="#" alt="Logo" /></a>
@@ -17,6 +17,7 @@
         </ul>
       </nav>
     </header>
+    <main id="maincontainer"></main>
     <div id="comment-popup">
       <span id="closeBtn">X</span>
       <div id="meal-details"></div>
@@ -34,15 +35,21 @@
             <textarea placeholder="Enter Comment" id="comment"></textarea>
           </div>
           <div>
-            <button type="button" id="commentBtn">Comment</button>
+            <button type="button" id="commentBtn" class="cmtBtn">
+              Comment
+            </button>
           </div>
         </form>
       </div>
     </div>
-    <main id="maincontainer">
-    </main>
     <footer><p>Created By @Justo and @ndorrh under MIT license</p></footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -1,10 +1,12 @@
+import { getData } from './commentPopUp.js';
+
 const commentBtn = document.getElementById('commentBtn');
 const previousComment = document.getElementById('prev-comments');
 const userName = document.getElementById('name');
 const comment = document.getElementById('comment');
 
-const getDataFromInvolvementApi = async () => {
-  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/TUbnIqBO6HOTZf6v0kyK/comments?item_id=15')
+const getDataFromInvolvementApi = async (mealId) => {
+  await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/TUbnIqBO6HOTZf6v0kyK/comments?item_id=${mealId}`)
     .then((rawData) => rawData.json())
     .then((commentData) => {
       previousComment.innerHTML = '';
@@ -14,9 +16,9 @@ const getDataFromInvolvementApi = async () => {
     });
 };
 
-const sendData = async () => {
+const sendData = async (mealId) => {
   const data = {
-    item_id: 15,
+    item_id: mealId,
     username: userName.value,
     comment: comment.value,
   };
@@ -29,15 +31,34 @@ const sendData = async () => {
     body: JSON.stringify(data),
   });
 
-  getDataFromInvolvementApi();
+  getDataFromInvolvementApi(mealId);
 
   userName.value = '';
   comment.value = '';
 };
 
-commentBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (userName.value !== '' && comment.value !== '') {
-    sendData();
+
+const commentPopUpContainer = document.getElementById('body');
+const mealsDatails = document.getElementById('meal-details');
+
+let id = 0;
+commentPopUpContainer.addEventListener('click', (e) => {
+  const btnId = parseInt(e.target.id, 10);
+  if (e.target.classList.contains('comments')) {
+    getDataFromInvolvementApi(btnId);
+    mealsDatails.innerHTML = '';
+    getData(btnId);
+    id = btnId;
+  } else if (e.target.classList.contains('cmtBtn')) {
+    if (userName.value !== '' && comment.value !== '') {
+      sendData(id);
+    }
   }
 });
+
+
+
+//commentBtn.addEventListener('click', (e) => {
+  //e.preventDefault();
+ 
+//});
