@@ -17,6 +17,28 @@
         </ul>
       </nav>
     </header>
+    <div id="comment-popup">
+      <span id="closeBtn">X</span>
+      <div id="meal-details"></div>
+      <div class="form-comment">
+        <div id="previous-comments-container">
+          <p id="comment-header">Comments <span id="no-of-comments"></span></p>
+          <ul id="prev-comments"></ul>
+        </div>
+        <form novalidate id="form">
+          <p id="Add-comment">Add a comment</p>
+          <div>
+            <input type="text" placeholder="name" id="name" />
+          </div>
+          <div>
+            <textarea placeholder="Enter Comment" id="comment"></textarea>
+          </div>
+          <div>
+            <button type="button" id="commentBtn">Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <main id="maincontainer">
     </main>
     <footer><p>Created By @Justo and @ndorrh under MIT license</p></footer>
