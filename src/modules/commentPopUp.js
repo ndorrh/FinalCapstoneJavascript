@@ -1,10 +1,17 @@
 const commentPopUp = document.getElementById('meal-details');
-const render = () => {
+const render = (meal) => {
   const PopUpbody = `<span id="closeBtn">X</span>
-                    <div class="image-container"><img src=${1} alt=${2}></div>
-                    <h2 class="meal-name">${3}</h2>
-                    <p id="category">${4}</p>
-                    <p class="cooking-instruction">Cooking Instructions</p>
+                    <div class="image-container"><img src=${meal[0].strMealThumb} alt=${meal[0].strMeal}></div>
+                    <h2 class="meal-name">${meal[0].strMeal}</h2>
+                    <p id="category">
+                      <span class=category">Category: </span>
+                      ${meal[0].strCategory}
+                    </p>
+                    <p class="cooking-instruction">
+                      <span class=instruction">Cooking Instructions: </span>
+                      ${meal[0].strInstructions}
+                    </p>
+
                     <table class="ingredients-table">
                       <thead>
                         <th>SN</th>
@@ -13,18 +20,27 @@ const render = () => {
                       <tbody class="tbody">
                         <tr>
                           <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
+                          <td>${meal[0].strIngredient1}</td>
+                          <td>${meal[0].strMeasure1}</td>
                         </tr>
                       </tbody>
                       </thead>
                     </table>
                  <div id="links"> 
-                    <a id="source" href=${12}>View Source</a>
-                    <a id="youtube-link" href=${13}>Watch on youtube</a>
+                    <a id="source" href=${meal[0].strSource}>View Source</a>
+                    <a id="youtube-link" href=${meal[0].strYoutube}>Watch on youtube</a>
                  </div>`;
 
   return PopUpbody;
 };
 
-export { render, commentPopUp };
+const getData = async (id) => {
+  await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then((rawData) => rawData.json())
+    .then((mealData) => {
+      console.log(mealData);
+      commentPopUp.innerHTML += render(mealData.meals);
+    });
+};
+
+export { render, commentPopUp, getData };
