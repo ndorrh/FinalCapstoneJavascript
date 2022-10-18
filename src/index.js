@@ -9,4 +9,3 @@ getData(53016);
 window.addEventListener('load', () => {
   fetcher();
 });
-
