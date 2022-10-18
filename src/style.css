@@ -4,10 +4,6 @@
   margin: 0;
 }
 
-body {
-  positio: absolute;
-}
-
 ul {
   list-style: none;
 }
@@ -125,23 +121,29 @@ form {
 
 input,
 textarea,
-#comment {
+#commentBtn {
   border-radius: 10px;
 }
 
 input {
-  max-width: 450px;
+  width: 45%;
   height: 40px;
 }
 
-#comment {
-  max-width: 225px;
+#commentBtn {
+  width: 22.5%;
   height: 40px;
 }
 
 textarea {
-  max-width: 500px;
+  width: 50%;
   height: 200px;
+}
+
+#closeBtn {
+  width: 60%;
+  text-align: right;
+  margin-top: 2%;
 }
 
 header,
