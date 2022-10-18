@@ -35,3 +35,9 @@ const sendData = async () => {
   comment.value = '';
 };
 
+commentBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (userName.value !== '' && comment.value !== '') {
+    sendData();
+  }
+});
