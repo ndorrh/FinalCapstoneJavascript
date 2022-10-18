@@ -103,7 +103,13 @@ footer {
 
 .heart {
   width: 100%;
+  pointer-events: none;
   height: 100%;
+}
+
+.pressed {
+  color: rgb(255, 108, 132);
+  cursor: auto;
 }
 
 .buttonholder {
