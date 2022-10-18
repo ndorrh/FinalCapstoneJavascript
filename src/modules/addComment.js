@@ -1,4 +1,5 @@
 import { getData } from './commentPopUp.js';
+import { commentCounter } from './commentCounter.js';
 
 const commentWrapper = document.getElementById('comment-popup');
 const previousComment = document.getElementById('prev-comments');
@@ -19,6 +20,7 @@ const getDataFromInvolvementApi = async (mealId) => {
       commentData.forEach((message, index) => {
         previousComment.innerHTML += `<li class="comment-prev">${commentData[index].creation_date} ${commentData[index].username}: ${commentData[index].comment} </li>`;
       });
+      commentCounter(commentData);
     });
 };
 
