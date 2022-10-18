@@ -72,8 +72,12 @@ footer {
 }
 
 .likesdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.25rem;
   align-self: center;
+  min-width: 80px;
 }
 
 .likebutton {
