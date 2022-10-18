@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 16px;
 }
 
 ul {
@@ -13,10 +14,17 @@ a {
   text-decoration: none;
 }
 
-header,
-footer {
+header {
   width: 80%;
   margin: 0 auto;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  border-top: 2px solid black;
 }
 
 .navbar,
@@ -31,4 +39,78 @@ footer {
 .nav-list {
   width: 70%;
   gap: 4%;
+}
+
+#maincontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 33.333333%;
+  padding: 1.3rem;
+  min-height: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainimage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nameandlikes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mealname {
+  font-size: 1rem;
+}
+
+.likesdiv {
+  padding: 0.25rem;
+  align-self: center;
+}
+
+.likebutton {
+  border: 0;
+  background: none;
+  padding: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heart {
+  width: 100%;
+  height: 100%;
+}
+
+.buttonholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .mealname {
+    font-size: 1.3rem;
+  }
+
+  .likebutton {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .section {
+    max-height: none;
+  }
 }
