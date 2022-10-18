@@ -1,5 +1,11 @@
 import enableButton from './enablebuttons.js';
 
+const counter = () => {
+  const display = document.querySelector('#chickencounter');
+  const sections = document.querySelectorAll('.section');
+  display.innerHTML = `(${sections.length})`;
+};
+
 const display = (array) => {
   const container = document.querySelector('#maincontainer');
   array.forEach((item) => {
@@ -20,6 +26,7 @@ const display = (array) => {
     </section>`;
   });
   enableButton();
+  counter();
 };
 
 export default display;
