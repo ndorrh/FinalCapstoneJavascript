@@ -6,7 +6,6 @@ const display = (array) => {
     <h2>${item.strMeal}</h2>
     <div class="buttonholder">
     <button class="comments button" id=${item.idMeal} type="button">Comments</button>
-    <button class="reservations button" id=${item.idMeal} type="button">Reservations</button>
     </div>
     </section>`;
   });
