@@ -5,6 +5,10 @@
   font-size: 16px;
 }
 
+.hiden {
+  display: none;
+}
+
 ul {
   list-style: none;
 }
@@ -29,7 +33,6 @@ footer {
 
 .navbar,
 .nav-list,
-#comment-popup,
 #meal-details,
 .category-ingredients-wrapper,
 #links,
