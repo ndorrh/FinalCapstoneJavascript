@@ -23,13 +23,11 @@
       <div id="meal-details"></div>
       <div class="form-comment">
         <div id="previous-comments-container">
-          <p id="comment-header">Comments (3)</p>
-          <ul id="prev-comments">
-            <li class="comment-prev">John</li>
-          </ul>
+          <p id="comment-header">Comments <span id="no-of-comments"></span></p>
+          <ul id="prev-comments"></ul>
         </div>
 
-        <form novalidate>
+        <form novalidate id="form">
           <p id="Add-comment">Add a comment</p>
           <div>
             <input type="text" placeholder="name" id="name" />
@@ -40,7 +38,7 @@
           </div>
 
           <div>
-            <button type="summit" id="commentBtn">Comment</button>
+            <button type="button" id="commentBtn">Comment</button>
           </div>
         </form>
       </div>

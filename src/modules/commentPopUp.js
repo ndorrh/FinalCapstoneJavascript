@@ -1,4 +1,5 @@
 const commentPopUp = document.getElementById('meal-details');
+
 const render = (meal) => {
   const PopUpbody = `
                     <div class="image-container" style="background-image:url(${meal[0].strMealThumb})"></div>
@@ -26,9 +27,10 @@ const getData = async (id) => {
   await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
     .then((rawData) => rawData.json())
     .then((mealData) => {
-      console.log(mealData);
       commentPopUp.innerHTML += render(mealData.meals);
     });
 };
 
-export { render, commentPopUp, getData };
+export {
+  render, commentPopUp, getData,
+};
