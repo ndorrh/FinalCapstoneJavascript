@@ -68,7 +68,7 @@ commentPopUpContainer.addEventListener('click', (e) => {
 
 // Adding Event listener to close button on comment Popup
 closeBtn.addEventListener('click', () => {
-  commentWrapper.classList.add('hiden');
+  commentWrapper.style.display = 'none';
   maincontainer.style.display = 'flex';
   header.style.display = 'flex';
   footer.style.display = 'flex';
