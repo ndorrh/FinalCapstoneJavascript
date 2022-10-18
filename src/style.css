@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  positio: absolute;
+}
+
 ul {
   list-style: none;
 }
@@ -20,7 +24,14 @@ footer {
 }
 
 .navbar,
-.nav-list {
+.nav-list,
+#comment-popup,
+#meal-details,
+.category-ingredients-wrapper,
+#links,
+#previous-comments,
+.form-comment,
+#previous-comments-container {
   display: flex;
 }
 
@@ -31,4 +42,109 @@ footer {
 .nav-list {
   width: 70%;
   gap: 4%;
+}
+
+/* Styling comment Popup */
+
+#comment-popup,
+#meal-details,
+#previous-comments {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal-name {
+  margin: 3% 0;
+}
+
+.category-ingredients-wrapper {
+  justify-content: space-between;
+  width: 100%;
+}
+
+#meal-details {
+  width: 60%;
+  border: solid red;
+}
+
+#comment-popup {
+  border: solid;
+  width: 100%;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.cooking-instruction {
+  padding: 2%;
+  text-align: left;
+}
+
+#links {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.image-container {
+  height: 60vh;
+  background-size: 100% 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  border: green solid;
+}
+
+.form-comment {
+  min-width: 60%;
+  flex-direction: column;
+  border: solid yellow;
+  gap: 40px;
+  margin-bottom: 3%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#Add-comment,
+#comment-header {
+  width: 100%;
+  text-align: center;
+}
+
+#prev-comments,
+form {
+  margin-left: 3%;
+}
+
+#previous-comments-container {
+  gap: 5px;
+  flex-direction: column;
+}
+
+input,
+textarea,
+#comment {
+  border-radius: 10px;
+}
+
+input {
+  max-width: 450px;
+  height: 40px;
+}
+
+#comment {
+  max-width: 225px;
+  height: 40px;
+}
+
+textarea {
+  max-width: 500px;
+  height: 200px;
+}
+
+header,
+footer {
+  display: none;
 }

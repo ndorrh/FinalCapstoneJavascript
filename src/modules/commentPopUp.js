@@ -1,31 +1,19 @@
 const commentPopUp = document.getElementById('meal-details');
 const render = (meal) => {
-  const PopUpbody = `<span id="closeBtn">X</span>
-                    <div class="image-container"><img src=${meal[0].strMealThumb} alt=${meal[0].strMeal}></div>
+  const PopUpbody = `
+                    <div class="image-container" style="background-image:url(${meal[0].strMealThumb})"></div>
                     <h2 class="meal-name">${meal[0].strMeal}</h2>
+                    <div class="category-ingredients-wrapper">
                     <p id="category">
                       <span class=category">Category: </span>
                       ${meal[0].strCategory}
                     </p>
+                    <button type="button">Ingredients and Measurement(s)</button>
+                    </div>
                     <p class="cooking-instruction">
                       <span class=instruction">Cooking Instructions: </span>
                       ${meal[0].strInstructions}
                     </p>
-
-                    <table class="ingredients-table">
-                      <thead>
-                        <th>SN</th>
-                        <th>Ingredients</th>
-                        <th>Measurement(s)</th>
-                      <tbody class="tbody">
-                        <tr>
-                          <td>1</td>
-                          <td>${meal[0].strIngredient1}</td>
-                          <td>${meal[0].strMeasure1}</td>
-                        </tr>
-                      </tbody>
-                      </thead>
-                    </table>
                  <div id="links"> 
                     <a id="source" href=${meal[0].strSource}>View Source</a>
                     <a id="youtube-link" href=${meal[0].strYoutube}>Watch on youtube</a>
