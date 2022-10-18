@@ -77,6 +77,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  min-height: 55px;
 }
 
 .mealname {
@@ -99,6 +100,12 @@ footer {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
+}
+
+.likebutton:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: rgb(253, 65, 65);
 }
 
 .heart {
@@ -133,7 +140,16 @@ footer {
     height: 2rem;
   }
 
+  .likebutton:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .section {
     max-height: none;
+  }
+
+  .nameandlikes {
+    min-height: 70px;
   }
 }
