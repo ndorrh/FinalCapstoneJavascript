@@ -18,7 +18,30 @@
       </nav>
     </header>
 
-    <div class="comment-popup"></div>
+    <div id="comment-popup">
+      <div id="meal-details"></div>
+
+      <div id="previous-comments">
+        <p id="Add-comment">Add a comment</p>
+        <ul id="prev-comments">
+          <li class="comment-prev">John</li>
+        </ul>
+      </div>
+
+      <form novalidate>
+        <div>
+          <input type="text" placeholder="name" id="name" />
+        </div>
+
+        <div>
+          <textarea placeholder="Enter Comment" id="comment"></textarea>
+        </div>
+
+        <div>
+          <button type="summit" id="comment">Comment</button>
+        </div>
+      </form>
+    </div>
 
     <footer>Created By @Justo and @ndorrh under MIT license</footer>
   </body>
