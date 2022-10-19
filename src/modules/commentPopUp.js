@@ -12,7 +12,7 @@ const render = (meal) => {
                     <button type="button" class="ingredients">Ingredients and Measurement(s)</button>
                     </div>
                     <p class="cooking-instruction">
-                      <span class=instruction">Cooking Instructions: </span>
+                      <small class=instruction" style="color: cyan">COOKING INSTRUCTION:</small>
                       ${meal[0].strInstructions}
                     </p>
                  <div id="links"> 
