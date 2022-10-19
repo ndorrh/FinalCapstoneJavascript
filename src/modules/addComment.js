@@ -1,5 +1,5 @@
 import { getData } from './commentPopUp.js';
-import { commentCounter } from './commentCounter.js';
+import { commentCounter, counter } from './commentCounter.js';
 
 const commentWrapper = document.getElementById('comment-popup');
 const previousComment = document.getElementById('prev-comments');
@@ -18,9 +18,9 @@ const getDataFromInvolvementApi = async (mealId) => {
     .then((commentData) => {
       previousComment.innerHTML = '';
       commentData.forEach((message, index) => {
-        previousComment.innerHTML += `<li class="comment-prev">${commentData[index].creation_date} ${commentData[index].username}: ${commentData[index].comment} </li>`;
+        previousComment.innerHTML += `<li class="comment-prev">${commentData[index].creation_date} ${commentData[index].username}:<br class="break"> ${commentData[index].comment} </li>`;
       });
-      commentCounter(commentData);
+      counter.innerHTML = `(${commentCounter(commentData)})`;
     });
 };
 
@@ -70,6 +70,6 @@ commentPopUpContainer.addEventListener('click', (e) => {
 closeBtn.addEventListener('click', () => {
   commentWrapper.style.display = 'none';
   maincontainer.style.display = 'flex';
-  header.style.display = 'flex';
+  header.style.display = 'block';
   footer.style.display = 'flex';
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food store</title>
+    <title>Chicken Meals</title>
   </head>
   <body id="body">
     <header id="header">
@@ -19,7 +19,9 @@
     </header>
     <main id="maincontainer"></main>
     <div id="comment-popup" class="hiden">
-      <span id="closeBtn">X</span>
+      <span class="closePopUp"
+        ><i class="fa-solid fa-xmark" id="closeBtn"></i
+      ></span>
       <div id="meal-details"></div>
       <div class="form-comment">
         <div id="previous-comments-container">
@@ -29,7 +31,7 @@
         <form novalidate id="form">
           <p id="Add-comment">Add a comment</p>
           <div>
-            <input type="text" placeholder="name" id="name" />
+            <input type="text" placeholder="Name" id="name" />
           </div>
           <div>
             <textarea placeholder="Enter Comment" id="comment"></textarea>
@@ -52,6 +54,10 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7a2d8c7046.js"
+      crossorigin="anonymous"
     ></script>
   </body>
 </html>

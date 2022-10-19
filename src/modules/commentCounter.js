@@ -1,6 +1,4 @@
 const counter = document.getElementById('no-of-comments');
-const commentCounter = (arrOfComments) => {
-  counter.innerHTML = `(${arrOfComments.length})`;
-};
+const commentCounter = (arrOfComments) => arrOfComments.length;
 
 export { counter, commentCounter };
