@@ -78,7 +78,7 @@ footer {
   border: solid;
   width: 100%;
   min-height: 100vh;
-  gap: 40px;
+  gap: 6px;
 }
 
 .cooking-instruction {
@@ -125,6 +125,7 @@ form {
 #previous-comments-container {
   gap: 5px;
   flex-direction: column;
+  margin-top: 5%;
 }
 
 input,
@@ -148,10 +149,15 @@ textarea {
   height: 200px;
 }
 
-#closeBtn {
+.closePopUp {
   width: 60%;
   text-align: right;
   margin-top: 2%;
+}
+
+.fa-xmark {
+  font-size: 60px;
+  color: blue;
 }
 
 #maincontainer {
