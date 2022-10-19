@@ -1,0 +1,485 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 207, 35);
+  background-color: rgb(153, 58, 14);
+}
+
+#logoimg {
+  width: 75px;
+  height: 75px;
+}
+
+.break {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.hiden {
+  display: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a,
+p {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.category {
+  font-size: 1.3rem;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  border-top: 2px solid rgb(255, 214, 66);
+}
+
+.navbar,
+.nav-list,
+#meal-details,
+.category-ingredients-wrapper,
+#links,
+#previous-comments,
+.form-comment,
+#previous-comments-container,
+#prev-comments {
+  display: flex;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.itemcounter,
+#comment-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+.nav-list {
+  width: 70%;
+  gap: 4%;
+}
+
+/* Styling comment Popup */
+
+#comment-popup,
+#meal-details,
+#previous-comments {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal-name {
+  margin: 3% 0;
+}
+
+.category-ingredients-wrapper {
+  justify-content: space-between;
+  width: 100%;
+}
+
+#meal-details {
+  width: 60%;
+}
+
+#comment-popup {
+  border: solid;
+  width: 100%;
+  min-height: 100vh;
+  gap: 6px;
+}
+
+.cooking-instruction {
+  padding: 2%;
+  text-align: left;
+}
+
+#links {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.image-container {
+  height: 85vh;
+  background-size: 100% 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.form-comment {
+  width: 60%;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 3%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#Add-comment,
+#comment-header {
+  width: 100%;
+  text-align: center;
+}
+
+#prev-comments,
+form {
+  margin-left: 3%;
+}
+
+#prev-comments {
+  flex-direction: column;
+  gap: 12px;
+}
+
+#previous-comments-container {
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+input,
+textarea {
+  font-size: 1.5rem;
+}
+
+input,
+textarea,
+#commentBtn {
+  border-radius: 10px;
+  border: 2px solid rgb(255, 214, 66);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(255, 214, 66);
+  font-size: 1.5rem;
+}
+
+input {
+  width: 45%;
+  height: 40px;
+  outline: none;
+}
+
+#commentBtn {
+  width: 22.5%;
+  height: 40px;
+  box-shadow: 2px 2px 2px rgb(255, 214, 66);
+}
+
+textarea {
+  width: 50%;
+  height: 200px;
+  outline: none;
+}
+
+.closePopUp {
+  width: 60%;
+  text-align: right;
+  margin-top: 2%;
+}
+
+.fa-xmark {
+  font-size: 2rem;
+  color: rgb(255, 207, 35);
+}
+
+#maincontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 33.333333%;
+  padding: 1rem;
+  min-height: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainimage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nameandlikes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 55px;
+}
+
+.mealname {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.likesdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  align-self: center;
+  min-width: 80px;
+}
+
+.likebutton {
+  border: 0;
+  background: none;
+  padding: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  color: none;
+}
+
+.likebutton:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.likes {
+  font-weight: bold;
+}
+
+.heart {
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  color: rgb(255, 200, 200);
+}
+
+.pressed {
+  color: rgb(255, 200, 200);
+  cursor: auto;
+}
+
+.buttonholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments,
+#commentBtn,
+.ingredients {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 2px solid rgb(255, 214, 66);
+  border-radius: 10%;
+  box-shadow: 2px 2px 2px rgb(255, 214, 66);
+}
+
+.comments:hover,
+#commentBtn:hover,
+.ingredients:hover {
+  background-color: rgb(255, 214, 66);
+  color: rgb(153, 58, 14);
+  box-shadow: 3px 3px 3px rgb(195, 124, 91);
+}
+
+.comment-prev,
+.cooking-instruction {
+  color: tan;
+}
+
+.fa-xmark:hover,
+a:hover {
+  color: rgb(168, 190, 160);
+}
+
+.comments:active,
+#commentBtn:active,
+.ingredients:active {
+  background-color: rgb(255, 214, 66);
+  color: rgb(153, 58, 14);
+}
+
+.button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  #prev-comments,
+  form {
+    margin-left: 0;
+  }
+
+  #meal-details {
+    width: 80%;
+  }
+
+  .form-comment {
+    width: 80%;
+  }
+
+  .closePopUp {
+    width: 80%;
+  }
+
+  .image-container {
+    height: 88vh;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .break {
+    display: block;
+  }
+
+  #meal-details {
+    width: 95%;
+  }
+
+  .form-comment {
+    width: 95%;
+  }
+
+  .closePopUp {
+    width: 95%;
+  }
+
+  .image-container {
+    height: 60vh;
+  }
+
+  form {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  form > div {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #commentBtn {
+    width: 35%;
+  }
+
+  .ingredients {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  #logoimg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mealname,
+  .meal-name {
+    font-size: 1.3rem;
+  }
+
+  .likesdiv {
+    padding: 0 0.25rem;
+    min-width: 90px;
+  }
+
+  .likebutton {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .likebutton:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .section {
+    padding: 1.3rem;
+    max-height: none;
+  }
+
+  .nameandlikes {
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    padding: 1rem 0;
+    margin: 0;
+    align-self: center;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .section {
+    min-height: 250px;
+    padding: 0.5rem;
+  }
+
+  .mealname {
+    font-size: 0.8rem;
+  }
+
+  .likes {
+    font-size: 0.8rem;
+  }
+
+  .nameandlikes {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  .button {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+}

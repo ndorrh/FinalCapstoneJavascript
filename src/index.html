@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Meals</title>
+  </head>
+  <body id="body">
+    <header id="header">
+      <nav class="navbar">
+        <a href="#" class="logo"><img id="logoimg" src="./images/logo.png" alt="Logo" /></a>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#">Chicken</a>
+            <div class="itemcounter" id="chickencounter"></div>
+          </li>
+          <li class="nav-item"><a href="#">Category</a></li>
+          <li class="nav-item"><a href="#">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="maincontainer"></main>
+    <div id="comment-popup" class="hiden">
+      <span class="closePopUp"
+        ><i class="fa-solid fa-xmark" id="closeBtn"></i
+      ></span>
+      <div id="meal-details"></div>
+      <div class="form-comment">
+        <div id="previous-comments-container">
+          <p id="comment-header">Comments <span id="no-of-comments"></span></p>
+          <ul id="prev-comments"></ul>
+        </div>
+        <form novalidate id="form">
+          <p id="Add-comment">Add a comment</p>
+          <div>
+            <input type="text" placeholder="Name" id="name" />
+          </div>
+          <div>
+            <textarea placeholder="Enter Comment" id="comment"></textarea>
+          </div>
+          <div>
+            <button type="button" id="commentBtn" class="cmtBtn">
+              Comment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer id="footer">
+      <p>Created By @Justo and @ndorrh under MIT license</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7a2d8c7046.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
