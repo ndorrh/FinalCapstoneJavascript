@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(255, 207, 35);
   background-color: rgb(153, 58, 14);
 }
@@ -28,8 +28,13 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+p {
   text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.category {
   font-size: 1.3rem;
 }
 
@@ -65,7 +70,8 @@ footer {
   width: 100px;
 }
 
-.itemcounter {
+.itemcounter,
+#comment-header {
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -165,21 +171,30 @@ input,
 textarea,
 #commentBtn {
   border-radius: 10px;
+  border: 2px solid rgb(255, 214, 66);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(255, 214, 66);
 }
 
 input {
   width: 45%;
   height: 40px;
+  outline: none;
 }
 
 #commentBtn {
   width: 22.5%;
   height: 40px;
+  box-shadow: 2px 2px 2px rgb(255, 214, 66);
 }
 
 textarea {
   width: 50%;
   height: 200px;
+  outline: none;
 }
 
 .closePopUp {
@@ -189,8 +204,8 @@ textarea {
 }
 
 .fa-xmark {
-  font-size: 60px;
-  color: blue;
+  font-size: 2rem;
+  color: rgb(255, 207, 35);
 }
 
 #maincontainer {
@@ -270,19 +285,32 @@ textarea {
   align-items: center;
 }
 
-.comments {
+.comments,
+#commentBtn,
+.ingredients {
   font-weight: bold;
   font-size: 1.2rem;
   border: 2px solid rgb(255, 214, 66);
   border-radius: 10%;
+  box-shadow: 2px 2px 2px rgb(255, 214, 66);
 }
 
-.comments:hover {
+.comments:hover,
+#commentBtn:hover,
+.ingredients:hover {
   background-color: rgb(255, 214, 66);
   color: rgb(153, 58, 14);
+  box-shadow: 3px 3px 3px rgb(195, 124, 91);
 }
 
-.comments:active {
+.fa-xmark:hover,
+a:hover {
+  color: rgb(168, 190, 160);
+}
+
+.comments:active,
+#commentBtn:active,
+.ingredients:active {
   background-color: rgb(255, 214, 66);
   color: rgb(153, 58, 14);
 }
@@ -368,7 +396,8 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  .mealname {
+  .mealname,
+  .meal-name {
     font-size: 1.3rem;
   }
 

@@ -70,6 +70,6 @@ commentPopUpContainer.addEventListener('click', (e) => {
 closeBtn.addEventListener('click', () => {
   commentWrapper.style.display = 'none';
   maincontainer.style.display = 'flex';
-  header.style.display = 'flex';
+  header.style.display = 'block';
   footer.style.display = 'flex';
 });

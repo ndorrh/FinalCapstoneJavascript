@@ -4,9 +4,9 @@ const render = (meal) => {
   const PopUpbody = `
                     <div class="image-container" style="background-image:url(${meal[0].strMealThumb})"></div>
                     <h2 class="meal-name">${meal[0].strMeal}</h2>
-                    <div class="category-ingredients-wrapper">
+                    <div class="category-ingredients-wrapper category">
                     <p id="category">
-                      <span class=category">Category: </span>
+                      Category:
                       ${meal[0].strCategory}
                     </p>
                     <button type="button" class="ingredients">Ingredients and Measurement(s)</button>
