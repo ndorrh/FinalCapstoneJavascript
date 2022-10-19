@@ -236,6 +236,10 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
   #prev-comments,
   form {
     margin-left: 0;
