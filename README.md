@@ -53,6 +53,13 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@ndorrh](https://github.com/ndorrh)
 - Twitter: [@ndorrh](https://twitter.com/ndorrh)
 - LinkedIn: [ndorrh](https://www.linkedin.com/in/ndorrh-oswald-ebu-82ab02236/)
+
+👤 **Justo Rago**
+
+- GitHub: [@githubhandle](https://github.com/asdt560)
+- Twitter: [@twitterhandle](https://twitter.com/JustoRago)
+- LinkedIn: [LinkedIn]( www.linkedin.com/in/justo-rago-0714b5208)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
