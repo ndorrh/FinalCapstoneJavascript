@@ -2,17 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body {
-  font-size: 25px;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.break {
-  display: none;
+  font-size: 16px;
 }
 
 .hiden {
@@ -20,12 +10,14 @@ body {
 }
 
 ul {
+  display: flex;
+  justify-content: space-around;
   list-style: none;
 }
 
 a {
-  color: black;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
 header {
@@ -38,7 +30,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 2rem;
-  border-top: 2px solid black;
+  border-top: 2px solid rgb(255, 214, 66);
 }
 
 .navbar,
@@ -51,6 +43,18 @@ footer {
 #previous-comments-container,
 #prev-comments {
   display: flex;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.itemcounter {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .navbar {
@@ -183,7 +187,7 @@ textarea {
 
 .section {
   width: 33.333333%;
-  padding: 1.3rem;
+  padding: 1rem;
   min-height: 300px;
   max-height: 400px;
   display: flex;
@@ -200,6 +204,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  min-height: 55px;
 }
 
 .mealname {
@@ -207,8 +212,12 @@ textarea {
 }
 
 .likesdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.25rem;
   align-self: center;
+  min-width: 80px;
 }
 
 .likebutton {
@@ -217,11 +226,29 @@ textarea {
   padding: none;
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
+  color: none;
+}
+
+.likebutton:hover {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.likes {
+  font-weight: bold;
 }
 
 .heart {
   width: 100%;
+  pointer-events: none;
   height: 100%;
+  color: rgb(255, 200, 200);
+}
+
+.pressed {
+  color: rgb(255, 200, 200);
+  cursor: auto;
 }
 
 .buttonholder {
@@ -230,84 +257,26 @@ textarea {
   align-items: center;
 }
 
+.comments {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 2px solid rgb(255, 214, 66);
+  border-radius: 10%;
+}
+
+.comments:hover {
+  background-color: rgb(255, 214, 66);
+  color: rgb(153, 58, 14);
+}
+
+.comments:active {
+  background-color: rgb(255, 214, 66);
+  color: rgb(153, 58, 14);
+}
+
 .button {
   margin: 0.5rem;
   padding: 0.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  #prev-comments,
-  form {
-    margin-left: 0;
-  }
-
-  #meal-details {
-    width: 80%;
-  }
-
-  .form-comment {
-    width: 80%;
-  }
-
-  .closePopUp {
-    width: 80%;
-  }
-
-  .image-container {
-    height: 88vh;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .break {
-    display: block;
-  }
-
-  #meal-details {
-    width: 95%;
-  }
-
-  .form-comment {
-    width: 95%;
-  }
-
-  .closePopUp {
-    width: 95%;
-  }
-
-  .image-container {
-    height: 60vh;
-  }
-
-  form {
-    margin-left: 0;
-    align-items: center;
-  }
-
-  form > div {
-    width: 100%;
-  }
-
-  input {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  textarea {
-    width: 100%;
-  }
-
-  #commentBtn {
-    width: 35%;
-  }
-
-  .ingredients {
-    width: 60%;
-  }
 }
 
 @media (min-width: 768px) {
@@ -320,7 +289,53 @@ textarea {
     height: 2rem;
   }
 
+  .likebutton:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .section {
+    padding: 1.3rem;
     max-height: none;
+  }
+
+  .nameandlikes {
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    padding: 1rem 0;
+    margin: 0;
+    align-self: center;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .section {
+    min-height: 250px;
+    padding: 0.5rem;
+  }
+
+  .mealname {
+    font-size: 0.8rem;
+  }
+
+  .likes {
+    font-size: 0.8rem;
+  }
+
+  .nameandlikes {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  .button {
+    padding: 0.25rem;
+    font-size: 0.8rem;
   }
 }
