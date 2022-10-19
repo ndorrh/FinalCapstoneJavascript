@@ -1,7 +1,8 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![](/projectimage.jpg)
 
-# Leaderboard
-> This is a leaderboard application. This web application consist of a simple form that is used to add name with corresponding scores to our list. On submit, this name is sent to an external api and displayed on the list. This project is built with html, scss, Javascript and webpack.
+# Final Capstone Project 2: Chicken meal Webapp
+> This is a web application where you can get information about how to cook different chicken meals. It was build using two external APIs (Themealdb API and Microverse Involvement API).
+> The webapp have 2 user interfaces that is the home page where users can directly like the different chicken meals and the comment popup where users can drop their comments about the meal.
 
 ## Built With
 
@@ -10,9 +11,12 @@
 - JavaScript (ES6)
 - Linters
 - Webpack
+- TheMealdb API
+- Involvement API from Microverse
+- Jest
 
 ## Live Demo
-[live demo](https://ndorrh.github.io/leaderBoard/)
+[live demo](https://ndorrh.github.io/FinalCapstoneJavascript/)
 
 
 ## Getting Started
@@ -34,6 +38,9 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 - Having VsCode installed and configured.
 - Having Git installed and configured.
+### OR
+- A smart phone or laptop to use the app directly.
+- Internet connection
 
 ### Setup
 - Clone the repository.
@@ -50,7 +57,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ndorrh/leaderboard/issues).
+Feel free to check the [issues page](https://github.com/ndorrh/FinalCapstoneJavascript/issues).
 
 ## Show your support
 
