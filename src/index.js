@@ -7,7 +7,3 @@ window.addEventListener('load', () => {
   fetcher();
   getLike();
 });
-
-window.addEventListener('load', () => {
-  fetcher();
-});
