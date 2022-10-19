@@ -4,6 +4,10 @@
 > This is a web application where you can get information about how to cook different chicken meals. It was build using two external APIs (Themealdb API and Microverse Involvement API).
 > The webapp have 2 user interfaces that is the home page where users can directly like the different chicken meals and the comment popup where users can drop their comments about the meal.
 
+## Description Video
+
+[Description Video](https://drive.google.com/file/d/1WgJiRkdYmPa7olVZSh8oYnNXpPd-FHac/view?usp=sharing)
+
 ## Built With
 
 - HTML
@@ -16,7 +20,7 @@
 - Jest
 
 ## Live Demo
-[live demo](https://ndorrh.github.io/FinalCapstoneJavascript/)
+[Github Pages](https://ndorrh.github.io/FinalCapstoneJavascript/)
 
 
 ## Getting Started
