@@ -17,7 +17,7 @@ const display = (array) => {
     <button id="like${item.idMeal}" class="likebutton" type="button">
     <ion-icon class="heart" name="heart-outline"></ion-icon>
     </button>
-    <p id="countlike${item.idMeal}"></p>
+    <p class="likes" id="countlike${item.idMeal}"></p>
     </div>
     </div>
     <div class="buttonholder">
