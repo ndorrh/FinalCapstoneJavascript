@@ -2,7 +2,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+}
+
+body {
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.break {
+  display: none;
 }
 
 .hiden {
@@ -38,7 +48,8 @@ footer {
 #links,
 #previous-comments,
 .form-comment,
-#previous-comments-container {
+#previous-comments-container,
+#prev-comments {
   display: flex;
 }
 
@@ -92,7 +103,7 @@ footer {
 }
 
 .image-container {
-  height: 60vh;
+  height: 85vh;
   background-size: 100% 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -120,6 +131,11 @@ form {
 #prev-comments,
 form {
   margin-left: 3%;
+}
+
+#prev-comments {
+  flex-direction: column;
+  gap: 12px;
 }
 
 #previous-comments-container {
@@ -217,6 +233,77 @@ textarea {
 .button {
   margin: 0.5rem;
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  #prev-comments,
+  form {
+    margin-left: 0;
+  }
+
+  #meal-details {
+    width: 80%;
+  }
+
+  .form-comment {
+    width: 80%;
+  }
+
+  .closePopUp {
+    width: 80%;
+  }
+
+  .image-container {
+    height: 88vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .break {
+    display: block;
+  }
+
+  #meal-details {
+    width: 95%;
+  }
+
+  .form-comment {
+    width: 95%;
+  }
+
+  .closePopUp {
+    width: 95%;
+  }
+
+  .image-container {
+    height: 60vh;
+  }
+
+  form {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  form > div {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  #commentBtn {
+    width: 35%;
+  }
+
+  .ingredients {
+    width: 60%;
+  }
 }
 
 @media (min-width: 768px) {

@@ -9,7 +9,7 @@ const render = (meal) => {
                       <span class=category">Category: </span>
                       ${meal[0].strCategory}
                     </p>
-                    <button type="button">Ingredients and Measurement(s)</button>
+                    <button type="button" class="ingredients">Ingredients and Measurement(s)</button>
                     </div>
                     <p class="cooking-instruction">
                       <span class=instruction">Cooking Instructions: </span>
