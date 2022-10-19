@@ -8,6 +8,11 @@
   background-color: rgb(153, 58, 14);
 }
 
+#logoimg {
+  width: 75px;
+  height: 75px;
+}
+
 .break {
   display: none;
 }
@@ -407,6 +412,11 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  #logoimg {
+    width: 150px;
+    height: 150px;
+  }
+
   .mealname,
   .meal-name {
     font-size: 1.3rem;
