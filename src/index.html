@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food store</title>
   </head>
-  <body>
-    <header>
+  <body id="body">
+    <header id="header">
       <nav class="navbar">
         <a href="#" class="logo"><img src="#" alt="Logo" /></a>
         <ul class="nav-list">
@@ -17,10 +17,41 @@
         </ul>
       </nav>
     </header>
-    <main id="maincontainer">
-    </main>
-    <footer><p>Created By @Justo and @ndorrh under MIT license</p></footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <main id="maincontainer"></main>
+    <div id="comment-popup" class="hiden">
+      <span id="closeBtn">X</span>
+      <div id="meal-details"></div>
+      <div class="form-comment">
+        <div id="previous-comments-container">
+          <p id="comment-header">Comments <span id="no-of-comments"></span></p>
+          <ul id="prev-comments"></ul>
+        </div>
+        <form novalidate id="form">
+          <p id="Add-comment">Add a comment</p>
+          <div>
+            <input type="text" placeholder="name" id="name" />
+          </div>
+          <div>
+            <textarea placeholder="Enter Comment" id="comment"></textarea>
+          </div>
+          <div>
+            <button type="button" id="commentBtn" class="cmtBtn">
+              Comment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer id="footer">
+      <p>Created By @Justo and @ndorrh under MIT license</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
