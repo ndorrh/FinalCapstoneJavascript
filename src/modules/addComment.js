@@ -60,8 +60,12 @@ commentPopUpContainer.addEventListener('click', (e) => {
     getData(btnId);
     id = btnId;
   } else if (e.target.classList.contains('cmtBtn')) {
+    const error = document.querySelector('#error-msg');
     if (userName.value !== '' && comment.value !== '') {
       sendData(id);
+      error.innerHTML = '';
+    } else {
+      error.innerHTML = 'Name and Comment Required!';
     }
   }
 });
